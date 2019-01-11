@@ -1,4 +1,3 @@
-// Made for Logic Cubed
 // We thank you for showing interest :)
 // I exist on Github at github.com/MovsisyanMher/
 
@@ -33,8 +32,11 @@ Maxout();
 const Rotate = (x, y, Theta, aboutX, aboutY) => 
 {
     const localizedPoint = [x - aboutX, y - aboutY];
-    const rotatedLocalizedPoint = [(localizedPoint[0] * Math.cos(Theta)) - (localizedPoint[1] * Math.sin(Theta)),
-                                   (localizedPoint[1] * Math.cos(Theta)) + (localizedPoint[0] * Math.sin(Theta))];
+    const rotatedLocalizedPoint = 
+    [
+        (localizedPoint[0] * Math.cos(Theta)) - (localizedPoint[1] * Math.sin(Theta)),
+        (localizedPoint[1] * Math.cos(Theta)) + (localizedPoint[0] * Math.sin(Theta))
+    ];
     const rotatedGlobalPoint = [rotatedLocalizedPoint[0] + aboutX, rotatedLocalizedPoint[1] + aboutY];
     return rotatedGlobalPoint;
 };
